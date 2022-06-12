@@ -1,6 +1,7 @@
 buildscript {
     ext {
         springBootVersion = '2.1.7.RELEASE'
+//        springBootVersion = '2.7.0'
     }
     repositories {
         mavenCentral()
@@ -19,11 +20,13 @@ apply plugin : 'io.spring.dependency-management'
 group 'org.example'
 version '1.0-SNAPSHOT'
 
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
     implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.projectlombok:lombok')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
