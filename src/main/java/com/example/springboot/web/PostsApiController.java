@@ -1,7 +1,9 @@
 package com.example.springboot.web;
 
 import com.example.springboot.service.posts.PostsService;
+import com.example.springboot.web.dto.PostsResponseDto;
 import com.example.springboot.web.dto.PostsSaveRequestDto;
+import com.example.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,7 +24,7 @@ public class PostsApiController {
     }
 
     @GetMapping("/api/v1/posts/{id}")
-    public PostsReponseDto findById(@PathVariable Long id){
+    public PostsResponseDto findById(@PathVariable Long id){
         return postsService.findById(id);
     }
 }
